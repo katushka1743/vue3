@@ -72,7 +72,7 @@ function deleteUser(index) {
 			<button @click="moveToTest" :class="{active_user : local.curPage == 3}">Тест</button>
 		</div>
 		<select v-model="local.curUserIndex" @change="checkAuth">
-			<option value=null>Нет пользователя</option>
+			<option :value=null>Нет пользователя</option>
 			<option :value="index" v-for="(elem, index) in local.users">{{ elem.name }}</option>
 		</select>
 	</div>
